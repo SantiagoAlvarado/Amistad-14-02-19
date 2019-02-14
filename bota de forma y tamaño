@@ -1,0 +1,45 @@
+var x = 200;
+var velx = 5;
+var vely = 6;
+var y = 200;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  mostrar(120,50,150,80);
+  moverx();
+  botarx();
+  botary();
+}
+
+function mostrar(R,G,B,tam) {
+  fill(R,G,B);
+  ellipse(x, y, tam, tam);
+}
+
+function moverx() {
+  x = x + velx;
+  y = y + vely;
+  console.log(x);
+}
+
+function botarx() {
+  if (x > 375) {
+    velx = velx * -1;
+  }
+  if (x < 25) {
+    velx = velx * -1;
+  }
+}
+
+
+  function botary() {
+    if (y > 375) 
+      vely = vely *-1;
+    
+    if (y < 25) 
+      vely = vely *-1;
+    }
